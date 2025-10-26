@@ -64,23 +64,11 @@ Cognito Agent is a Streamlit-based web application that provides a powerful and 
 
 2.  **Open your browser** and navigate to the local URL provided by Streamlit (usually `http://localhost:8501`).
 
-3.  **Enter the password** you set in the `secrets.toml` file.
+3.  **Enter a research topic** in the text input field.
 
-4.  **Enter a research topic** in the text input field.
-
-5.  **Click "Start Research"** to begin the research process. The AI agents will start working, and the results will be displayed on the screen.
+4.  **Click "Start Research"** to begin the research process. The AI agents will start working, and the results will be displayed on the screen.
 
 ## 🛠️ Configuration
 
 - **Agents and Tasks:** The behavior of the AI agents and the tasks they perform can be configured in `config/agents.yaml` and `config/tasks.yaml`.
 - **Pinecone Indexes:** The configuration for the Pinecone indexes can be modified in `config/pinecone_indexes.yaml`.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a pull request or open an issue if you have any suggestions or find any bugs.
-
-1.  **Fork the repository**
-2.  **Create your feature branch** (`git checkout -b feature/AmazingFeature`)
-3.  **Commit your changes** (`git commit -m 'Add some AmazingFeature'`)
-4.  **Push to the branch** (`git push origin feature/AmazingFeature`)
-5.  **Open a pull request**

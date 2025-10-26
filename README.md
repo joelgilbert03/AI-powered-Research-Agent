@@ -15,7 +15,6 @@ Cognito Agent is a Streamlit-based web application that provides a powerful and 
 - **🌐 Web-Powered:** The agents can search the web, scrape websites, and generate comprehensive reports.
 - **🧠 Vector-Based Memory:** Research jobs and content are stored in a Pinecone vector database for semantic search and retrieval.
 - **🖥️ Interactive UI:** A user-friendly web interface built with Streamlit for interacting with the AI agents and viewing results.
-- **🔒 Secure:** Password-based authentication for securing the application.
 
 ## 🚀 Getting Started
 

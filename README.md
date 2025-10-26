@@ -54,12 +54,13 @@ Cognito Agent is a Streamlit-based web application that provides a powerful and 
     GROQ_API_KEY="your-groq-api-key"
     ```
 
-5.  **Set up Streamlit secrets:**
-    Create a `.streamlit/secrets.toml` file and add the following for authentication:
-    ```toml
-    PASSWORD = "your-password"
-    ```
 
+### Usage
+
+1.  **Run the Streamlit application:**
+    ```bash
+    streamlit run src/app.py
+    ```
 
 2.  **Open your browser** and navigate to the local URL provided by Streamlit (usually `http://localhost:8501`).
 

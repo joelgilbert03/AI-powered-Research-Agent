@@ -60,12 +60,6 @@ Cognito Agent is a Streamlit-based web application that provides a powerful and 
     PASSWORD = "your-password"
     ```
 
-### Usage
-
-1.  **Run the Streamlit application:**
-    ```bash
-    streamlit run src/app.py
-    ```
 
 2.  **Open your browser** and navigate to the local URL provided by Streamlit (usually `http://localhost:8501`).
 
@@ -89,7 +83,3 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 3.  **Commit your changes** (`git commit -m 'Add some AmazingFeature'`)
 4.  **Push to the branch** (`git push origin feature/AmazingFeature`)
 5.  **Open a pull request**
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -1,0 +1,35 @@
+indexes:
+  jobs:
+    name: "cognito-jobs"
+    dimension: 768
+    metric: "cosine"
+    replicas: 1
+    shards: 1
+    metadata_config:
+      indexed: ["job_type", "status", "user_id", "created_at"]
+    
+  content:
+    name: "cognito-content"
+    dimension: 768
+    metric: "cosine"
+    replicas: 1
+    shards: 1
+    metadata_config:
+      indexed: ["job_id", "url", "credibility_score", "source_type"]
+
+namespaces:
+  job_prefix: "job_"
+  user_prefix: "user_"
+  system_prefix: "sys_"
+  
+cleanup:
+  auto_cleanup: true
+  retention_days: 30
+  cleanup_schedule: "daily"
+  exclude_namespaces: ["sys_permanent"]
+
+performance:
+  batch_upsert_size: 100
+  max_concurrent_requests: 10
+  retry_attempts: 3
+  timeout_seconds: 30

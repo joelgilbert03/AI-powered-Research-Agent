@@ -1,0 +1,49 @@
+research_task:
+  description: |
+    Conduct comprehensive research on {topic}. Search for and summarize the latest 
+    credible findings from academic papers, industry reports, and reputable sources. 
+    Focus on recent developments, key players, and practical applications.
+    
+    Output requirements:
+    - Include all source URLs and titles
+    - Summarize key findings in bullet points
+    - Identify any conflicting information
+    - Note publication dates and credibility indicators
+  expected_output: |
+    JSON list of findings with structure:
+    [
+      {
+        "source": "URL",
+        "title": "Article Title", 
+        "summary": "Key findings summary",
+        "date": "Publication date",
+        "credibility": "High/Medium/Low"
+      }
+    ]
+  agent: researcher
+  tools:
+    - web_search_tool
+    - web_scraper_tool
+
+writing_task:
+  description: |
+    Using the research findings provided, write a comprehensive report on {topic}. 
+    Structure: Introduction, Key Findings (with bullet points), Analysis, and Conclusion.
+    
+    Requirements:
+    - All facts must be cited with numbered references [1], [2], etc.
+    - Include contradictory information when found
+    - Provide practical implications
+    - Maintain objective, academic tone
+    - Include a references section at the end
+  expected_output: |
+    Markdown-formatted report with:
+    - Clear section headers
+    - Numbered citations throughout
+    - References list with full URLs
+    - Executive summary at the top
+  agent: writer
+  context: [research_task]
+  output_file: "report_{topic}.md"
+  tools:
+    - pinecone_retriever_tool
